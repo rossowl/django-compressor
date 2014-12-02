@@ -4,7 +4,12 @@ import time
 
 from django.core.cache import get_cache
 from django.utils.encoding import smart_str
-from django.utils.hashcompat import md5_constructor
+
+try:
+    from django.utils.hashcompat import md5_constructor
+
+except ImportError:
+    from hashlib import md5_constructor
 
 from compressor.conf import settings
 
