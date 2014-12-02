@@ -9,7 +9,7 @@ try:
     from django.utils.hashcompat import md5_constructor
 
 except ImportError:
-    from hashlib import md5_constructor
+    from hashlib import md5 as md5_constructor
 
 from compressor.conf import settings
 
